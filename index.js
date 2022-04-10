@@ -221,14 +221,16 @@ instance.prototype.actions = function(system) {
 						 label: 'Video Type',
 						 id: 'vidtype',
 						 choices: [
-							 { id: '0', label: 'Video'},
-							 { id: '1', label: 'Y/C'},
-							 { id: '2', label: 'SD Component'},
-							 { id: '3', label: 'HD Component'},
-							 { id: '4', label: 'RGsB (PC/Video)'},
-							 { id: '5', label: 'RGBS (PC/Video)'},
-							 { id: '6', label: 'RGBHV'},
-							 { id: '7', label: 'HDMI'}
+							 { id: '0', label: 'RGBHV'},
+							 { id: '1', label: 'RGBS (PC)'},
+							 { id: '2', label: 'RGsB (PC)'},
+							 { id: '3', label: 'ED/HD Component'},
+							 { id: '4', label: 'SD Component'},
+							 { id: '5', label: 'RGSB (Video)'},
+							 { id: '6', label: 'RGsB (Video)'},
+							 { id: '7', label: 'Y/C'}
+							 { id: '8', label: 'Video'}
+							 { id: '9', label: 'HDMI'}											 
 						 ]
 				}
 			]
