@@ -212,7 +212,27 @@ instance.prototype.actions = function(system) {
 						 ]
 				}
 			]
-		},
+		},		
+		'VideoType':   {
+			label: 'Video Type',
+			options: [
+				{
+					type: 'dropdown',
+						 label: 'Video Type',
+						 id: 'vidtype',
+						 choices: [
+							 { id: '0', label: 'Video'},
+							 { id: '1', label: 'Y/C'},
+							 { id: '2', label: 'SD Component'},
+							 { id: '3', label: 'HD Component'},
+							 { id: '4', label: 'RGsB (PC/Video)'},
+							 { id: '5', label: 'RGBS (PC/Video)'},
+							 { id: '6', label: 'RGBHV'},
+							 { id: '7', label: 'HDMI'}
+						 ]
+				}
+			]
+		},		
 		/*
 		'command':   {
 			label: 'Command',
@@ -288,6 +308,10 @@ instance.prototype.actions = function(system) {
 				cmd = 'Y 0 146 '+ opt.transId;
 				break;
 
+			case 'VideoType':                
+                		cmd = 'Y 0 '+ opt.outId +' '+ opt.vidtype;
+				break; 
+				
 			case 'command':
 				cmd = opt.comId;
 				break;
