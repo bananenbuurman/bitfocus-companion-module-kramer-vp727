@@ -331,8 +331,8 @@ instance.prototype.actions = function(system) {
 
 			case 'VideoType':                
                 		cmd = 'Y 0 95 '+ opt.vidtype;
-				break; 
-				
+				cmd_pre = 'Y 0 94 '+ opt.pgmId;
+				break; 				
 			case 'command':
 				cmd = opt.comId;
 				break;
@@ -340,19 +340,23 @@ instance.prototype.actions = function(system) {
 	};
 
 
-
+	if (cmd_pre !== undefined) {	
+		debug('sending cmd_pre ',cmd_pre,"to",self.config.host);
+		if (self.socket !== undefined && self.socket.connected) {
+			self.socket.send(cmd_pre + '\n');
+		} else {
+			debug('Socket not connected :(');
+		}
+	}
 
 
 	if (cmd !== undefined) {
-
-		debug('sending ',cmd,"to",self.config.host);
-
+		debug('sending cmd ',cmd,"to",self.config.host);
 		if (self.socket !== undefined && self.socket.connected) {
 			self.socket.send(cmd + '\n');
 		} else {
 			debug('Socket not connected :(');
 		}
-
 	}
 
 };
