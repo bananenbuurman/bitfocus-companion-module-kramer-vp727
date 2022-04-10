@@ -330,7 +330,7 @@ instance.prototype.actions = function(system) {
 				break;
 
 			case 'VideoType':                
-                		cmd = 'Y 0 95 '+ opt.pgmId +' '+ opt.vidtype;
+                		cmd = 'Y 0 95 '+ opt.vidtype;
 				break; 
 				
 			case 'command':
