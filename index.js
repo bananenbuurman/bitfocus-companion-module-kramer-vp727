@@ -226,7 +226,7 @@ instance.prototype.actions = function(system) {
 							 { id: '2', label: 'RGsB (PC)'},
 							 { id: '3', label: 'ED/HD Component'},
 							 { id: '4', label: 'SD Component'},
-							 { id: '5', label: 'RGSB (Video)'},
+							 { id: '5', label: 'RGBS (Video)'},
 							 { id: '6', label: 'RGsB (Video)'},
 							 { id: '7', label: 'Y/C'},
 							 { id: '8', label: 'Video'},
